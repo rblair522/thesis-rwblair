@@ -97,7 +97,7 @@ m.Material(name='PLLA')
 mat = m.materials['PLLA']
 #
 # Density
-mat.Density(table=((1.2e-06, ), ))
+mat.Density(table=((1.2e-09, ), ))
 #
 # Elastic
 mat.Elastic(table=((
