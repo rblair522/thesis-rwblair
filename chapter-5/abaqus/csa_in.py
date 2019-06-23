@@ -45,8 +45,15 @@ import connectorBehavior
 # Material models
 # ********************************************************************************
 #
+# PLLA
 execfile('PLLA.py')
-execfile('PET.py')
+#
+# PET
+m = mdb.models['Model-1']
+m.Material(name='PET')
+mat = mdb.models['Model-1'].materials['PET']
+mat.Density(table=((1.38e-09, ), ))
+mat.Elastic(table=((2500.0, 0.4), ))
 #
 # ********************************************************************************
 # Analysis procedure
